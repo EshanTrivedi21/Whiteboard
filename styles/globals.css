@@ -9,10 +9,45 @@
 }
 
 body {
-  background-color: rgb(223, 155, 39);
+  background-color: #f79489;
 }
 
-.canvasMain {
+.Heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 2rem 0rem;
+  margin-bottom: 4rem;
+}
+
+.componentDiv {
+  width: 75%;
+  margin: 2.5rem auto;
+  gap: 1rem;
+}
+
+.button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  background-color: #f79489;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background-color: #f27b7f;
+}
+
+.divRandom {
+  margin-top: 6rem;
+}
+
+.canvasMainPC {
   width: 76vw !important;
   height: 95vh !important;
   margin: 2vh 1vw;
@@ -20,11 +55,49 @@ body {
   border-radius: 10px;
 }
 
-.navbarMain {
+.navbarMainPC {
   width: 21vw !important;
   height: 95vh !important;
   margin: 2vh 1vw;
   margin-right: 0.5vw;
   border-radius: 10px;
-  background: #fff;
+  background: #fadcd9;
+}
+
+input[type=range] {
+  height: 0.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  animate: 0.2s;
+  box-shadow: 1px 1px 2px #A6A6A6;
+  background: #FF96AB;
+  border-radius: 2.5px;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 2px #A6A6A6;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50px;
+  background: #F27B7F;
+  -webkit-appearance: none;
+  margin: -3px;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 100%;
+	height: 20px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
 }
