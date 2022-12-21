@@ -11,8 +11,6 @@ export const Board = () => {
   useEffect(() => {
     const canvas = new fabric.Canvas(canvasRef.current, {
       backgroundColor: "white",
-      width: 1290,
-      height: 500,
       isDrawingMode: true,
     });
     setFabricCanvas(canvas);
@@ -67,8 +65,8 @@ export const Board = () => {
     }
   };
   return (
-    <div className="container w-full h-full">
-      <canvas ref={canvasRef}></canvas>
+    <div className="container w-full h-full flex">
+      <div className="navbarMain">
       <div>
         <label>Pen Width : {penWidth} </label>
         <input
@@ -109,9 +107,13 @@ export const Board = () => {
       </div>
       <div>
         <button type="button" onClick={() => toggleErase()}>
-          {toggleEraser ? "Stop" : "Use"} Erase
+          {toggleEraser ? "Use Pen" : "Use Eraser"}
         </button>
       </div>
+      </div>
+      <div> 
+        <canvas className="canvasMain" ref={canvasRef}></canvas>
+      </div>  
     </div>
   );
 };
